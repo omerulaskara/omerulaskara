@@ -1,157 +1,246 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="ulaskara@studio whoami terminal" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="ulaskara@studio portfolio terminal" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
 
-  <!-- window background -->
+  <!-- ============== WINDOW CHROME ============== -->
   <rect x="0" y="0" width="820" height="520" rx="10" ry="10" fill="#0d0d14"/>
   <rect x="0.5" y="0.5" width="819" height="519" rx="9.5" ry="9.5" fill="none" stroke="rgba(255,255,255,0.08)"/>
 
   <!-- title bar -->
   <path d="M10,0 L810,0 Q820,0 820,10 L820,40 L0,40 L0,10 Q0,0 10,0 Z" fill="#07070b"/>
   <line x1="0" y1="40" x2="820" y2="40" stroke="rgba(255,255,255,0.08)"/>
-
-  <!-- traffic lights -->
   <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
   <circle cx="42" cy="20" r="6" fill="#ffbd2e"/>
   <circle cx="62" cy="20" r="6" fill="#27c93f"/>
-
-  <!-- title bar text -->
   <text x="410" y="25" text-anchor="middle" font-size="12" fill="rgba(230,225,211,0.55)">
     <tspan>ulaskara@studio</tspan><tspan fill="rgba(230,225,211,0.35)">:</tspan><tspan fill="rgba(230,225,211,0.78)"> ~/portfolio</tspan>
   </text>
 
-  <!-- tab bar -->
+  <!-- ============== TAB BAR ============== -->
   <line x1="0" y1="76" x2="820" y2="76" stroke="rgba(255,255,255,0.08)"/>
-  <text x="22" y="62" font-size="11" fill="rgba(230,225,211,0.55)">
-    <tspan fill="rgba(230,225,211,0.35)">01</tspan>
-    <tspan dx="6" fill="#e6e1d3">whoami</tspan><tspan fill="#62c4ff">.sh</tspan>
-  </text>
-  <line x1="20" y1="76" x2="115" y2="76" stroke="#62c4ff" stroke-width="2"/>
-  <text x="135" y="62" font-size="11" fill="rgba(230,225,211,0.35)">02 stats.json</text>
-  <text x="240" y="62" font-size="11" fill="rgba(230,225,211,0.35)">03 domains.json</text>
-  <text x="362" y="62" font-size="11" fill="rgba(230,225,211,0.35)">04 projects.gitlog</text>
-  <text x="500" y="62" font-size="11" fill="rgba(230,225,211,0.35)">05 stack.json</text>
-  <text x="605" y="62" font-size="11" fill="rgba(230,225,211,0.35)">06 arch.tree</text>
-  <text x="700" y="62" font-size="11" fill="rgba(230,225,211,0.35)">07 security</text>
+  <text x="22"  y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">01</tspan><tspan dx="6" fill="#e6e1d3">whoami</tspan><tspan fill="#62c4ff">.sh</tspan></text>
+  <text x="135" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">02</tspan><tspan dx="6">stats</tspan><tspan fill="#62c4ff">.json</tspan></text>
+  <text x="240" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">03</tspan><tspan dx="6">domains</tspan><tspan fill="#62c4ff">.json</tspan></text>
+  <text x="362" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">04</tspan><tspan dx="6">projects</tspan><tspan fill="#62c4ff">.gitlog</tspan></text>
+  <text x="500" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">05</tspan><tspan dx="6">stack</tspan><tspan fill="#62c4ff">.json</tspan></text>
+  <text x="605" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">06</tspan><tspan dx="6">arch</tspan><tspan fill="#62c4ff">.tree</tspan></text>
+  <text x="700" y="62" font-size="11" fill="rgba(230,225,211,0.55)"><tspan fill="rgba(230,225,211,0.35)">07</tspan><tspan dx="6">security</tspan><tspan fill="#62c4ff">.yaml</tspan></text>
 
-  <!-- terminal content -->
+  <!-- sliding active-tab underline (28s loop, 7 tabs * 4s each) -->
+  <line y1="76" y2="76" stroke="#62c4ff" stroke-width="2">
+    <animate attributeName="x1"
+             values="20;20;133;133;238;238;360;360;498;498;603;603;698;698;20"
+             keyTimes="0;0.137;0.143;0.280;0.286;0.423;0.429;0.566;0.571;0.709;0.714;0.851;0.857;0.995;1"
+             dur="28s" repeatCount="indefinite"/>
+    <animate attributeName="x2"
+             values="115;115;225;225;345;345;495;495;590;590;690;690;780;780;115"
+             keyTimes="0;0.137;0.143;0.280;0.286;0.423;0.429;0.566;0.571;0.709;0.714;0.851;0.857;0.995;1"
+             dur="28s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ============== TAB 01 — whoami.sh ============== -->
   <g transform="translate(28, 120)">
+    <animate attributeName="opacity"
+             values="1;1;0;0;1"
+             keyTimes="0;0.137;0.143;0.995;1"
+             dur="28s" repeatCount="indefinite"/>
 
-    <!-- prompt + command (always visible) -->
     <text font-size="14" y="0" fill="#e6e1d3">
       <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
       <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
-      <tspan dx="6" fill="#e6e1d3">whoami</tspan>
+      <tspan dx="6">whoami</tspan>
     </text>
-
-    <!-- row 1: name -->
-    <g transform="translate(0, 36)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.8s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">name</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6">Ömer Ulaş </tspan><tspan fill="#d9b86b">Kara</tspan>
-      </text>
-    </g>
-
-    <!-- row 2: role -->
-    <g transform="translate(0, 60)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.2s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">role</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6">Senior Full-Stack Developer </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan><tspan> Founding Developer</tspan>
-      </text>
-    </g>
-
-    <!-- row 3: location -->
-    <g transform="translate(0, 84)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.6s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">location</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6">Istanbul, Türkiye</tspan>
-      </text>
-    </g>
-
-    <!-- row 4: domains -->
-    <g transform="translate(0, 108)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="2.0s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">domains</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6">Legal Tech </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> Telephony </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> Mobile </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> AI/RAG</tspan>
-      </text>
-    </g>
-
-    <!-- row 5: ships -->
-    <g transform="translate(0, 132)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="2.4s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">ships</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6" fill="#c4e890">"WebRTC SaaS · UYAP automation · Social art network"</tspan>
-      </text>
-    </g>
-
-    <!-- row 6: stack -->
-    <g transform="translate(0, 156)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="2.8s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">stack</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6">TypeScript </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> NestJS </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> Next.js </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> React Native </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan>
-        <tspan> Postgres</tspan>
-      </text>
-    </g>
-
-    <!-- row 7: production -->
-    <g transform="translate(0, 180)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="3.2s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">production</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6" fill="#c4e890">"ccp.stroke-app.com · stroke-app.com · Sprint 19"</tspan>
-      </text>
-    </g>
-
-    <!-- row 8: available -->
-    <g transform="translate(0, 204)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="3.6s" fill="freeze"/>
-      <text font-size="13.5" y="0" fill="#e6e1d3">
-        <tspan fill="#c4a5ff">available</tspan>
-        <tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan>
-        <tspan dx="6" fill="#ff9ec7">true</tspan>
-        <tspan dx="10" fill="rgba(230,225,211,0.45)"># Remote · Freelance · Founding roles</tspan>
-      </text>
-    </g>
-
-    <!-- row 9: comment -->
-    <g transform="translate(0, 240)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="4.0s" fill="freeze"/>
-      <text font-size="13" y="0" fill="rgba(230,225,211,0.45)">// session active — awaiting command</text>
-    </g>
-
-    <!-- next prompt + blinking cursor -->
-    <g transform="translate(0, 276)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="4.5s" fill="freeze"/>
-      <text font-size="14" y="0" fill="#e6e1d3">
-        <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
-        <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
-      </text>
-      <!-- blinking cursor block -->
-      <rect x="138" y="-12" width="8" height="15" fill="#d9b86b">
-        <animate attributeName="opacity" values="1;0;1;0;1;0;1;0" dur="1.2s" begin="4.7s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-
+    <text font-size="13.5" y="32" fill="#e6e1d3"><tspan fill="#c4a5ff">name</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6">Ömer Ulaş </tspan><tspan fill="#d9b86b">Kara</tspan></text>
+    <text font-size="13.5" y="54" fill="#e6e1d3"><tspan fill="#c4a5ff">role</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6">Senior Full-Stack Developer </tspan><tspan fill="rgba(230,225,211,0.55)">·</tspan><tspan> Founding Developer</tspan></text>
+    <text font-size="13.5" y="76" fill="#e6e1d3"><tspan fill="#c4a5ff">location</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6">Istanbul, Türkiye</tspan></text>
+    <text font-size="13.5" y="98" fill="#e6e1d3"><tspan fill="#c4a5ff">domains</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6">Legal Tech · Telephony · Mobile · AI/RAG</tspan></text>
+    <text font-size="13.5" y="120" fill="#e6e1d3"><tspan fill="#c4a5ff">ships</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6" fill="#c4e890">"WebRTC SaaS · UYAP automation · Social art network"</tspan></text>
+    <text font-size="13.5" y="142" fill="#e6e1d3"><tspan fill="#c4a5ff">stack</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6">TypeScript · NestJS · Next.js · React Native · Postgres</tspan></text>
+    <text font-size="13.5" y="164" fill="#e6e1d3"><tspan fill="#c4a5ff">production</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6" fill="#c4e890">"ccp.stroke-app.com · stroke-app.com · Sprint 19"</tspan></text>
+    <text font-size="13.5" y="186" fill="#e6e1d3"><tspan fill="#c4a5ff">available</tspan><tspan dx="6" fill="rgba(230,225,211,0.55)">=</tspan><tspan dx="6" fill="#ff9ec7">true</tspan><tspan dx="10" fill="rgba(230,225,211,0.45)"># Remote · Freelance · Founding roles</tspan></text>
+    <text font-size="13" y="216" fill="rgba(230,225,211,0.45)">// session active — awaiting command</text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <!-- status bar -->
+  <!-- ============== TAB 02 — stats.json ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.137;0.143;0.280;0.286;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">cat stats.json</tspan>
+    </text>
+    <text font-size="13.5" y="32" fill="rgba(230,225,211,0.55)">{</text>
+    <text font-size="13.5" y="54" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"repositories"</tspan><tspan fill="rgba(230,225,211,0.55)">:       </tspan><tspan fill="#ff9ec7">17</tspan><tspan fill="rgba(230,225,211,0.55)">,</tspan></text>
+    <text font-size="13.5" y="76" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"active_endpoints"</tspan><tspan fill="rgba(230,225,211,0.55)">:   </tspan><tspan fill="#ff9ec7">14</tspan><tspan fill="rgba(230,225,211,0.55)">,</tspan></text>
+    <text font-size="13.5" y="98" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"sprints_shipped"</tspan><tspan fill="rgba(230,225,211,0.55)">:    </tspan><tspan fill="#ff9ec7">19</tspan><tspan fill="rgba(230,225,211,0.55)">,</tspan></text>
+    <text font-size="13.5" y="120" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"third_party_apis"</tspan><tspan fill="rgba(230,225,211,0.55)">:   </tspan><tspan fill="#c4e890">"10+"</tspan><tspan fill="rgba(230,225,211,0.55)">,</tspan></text>
+    <text font-size="13.5" y="142" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"breakdown"</tspan><tspan fill="rgba(230,225,211,0.55)">: { </tspan><tspan fill="#c4a5ff">"legal"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#ff9ec7">9</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4a5ff">"saas"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#ff9ec7">1</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4a5ff">"mobile"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#ff9ec7">2</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4a5ff">"utils"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#ff9ec7">5</tspan><tspan fill="rgba(230,225,211,0.55)"> },</tspan></text>
+    <text font-size="13.5" y="164" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"production"</tspan><tspan fill="rgba(230,225,211,0.55)">:     [</tspan><tspan fill="#c4e890">"ccp.stroke-app.com"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"stroke-app.com"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="186" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"case_filing"</tspan><tspan fill="rgba(230,225,211,0.55)">:    </tspan><tspan fill="#c4e890">"UYAP automation pipeline · 14 endpoints"</tspan></text>
+    <text font-size="13.5" y="208" fill="rgba(230,225,211,0.55)">}</text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== TAB 03 — domains.json ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.280;0.286;0.423;0.429;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">cat domains.json</tspan>
+    </text>
+    <text font-size="13.5" y="32" fill="rgba(230,225,211,0.55)">{</text>
+    <text font-size="13.5" y="54" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"01_legal_tech"</tspan><tspan fill="rgba(230,225,211,0.55)">:  { </tspan><tspan fill="#c4a5ff">"category"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"UYAP Ecosystem"</tspan><tspan fill="rgba(230,225,211,0.55)">,       </tspan><tspan fill="#c4a5ff">"depth"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"8+ projects"</tspan><tspan fill="rgba(230,225,211,0.55)"> },</tspan></text>
+    <text font-size="13.5" y="80" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"02_telephony"</tspan><tspan fill="rgba(230,225,211,0.55)">:   { </tspan><tspan fill="#c4a5ff">"category"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"Contact Center"</tspan><tspan fill="rgba(230,225,211,0.55)">,       </tspan><tspan fill="#c4a5ff">"stack"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"Asterisk · sip.js"</tspan><tspan fill="rgba(230,225,211,0.55)"> },</tspan></text>
+    <text font-size="13.5" y="106" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"03_mobile"</tspan><tspan fill="rgba(230,225,211,0.55)">:      { </tspan><tspan fill="#c4a5ff">"category"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"Social &amp; Realtime"</tspan><tspan fill="rgba(230,225,211,0.55)">,    </tspan><tspan fill="#c4a5ff">"stack"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"RN · Expo · Skia"</tspan><tspan fill="rgba(230,225,211,0.55)"> },</tspan></text>
+    <text font-size="13.5" y="132" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"04_ai_rag"</tspan><tspan fill="rgba(230,225,211,0.55)">:      { </tspan><tspan fill="#c4a5ff">"category"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"IR · Data Pipeline"</tspan><tspan fill="rgba(230,225,211,0.55)">,   </tspan><tspan fill="#c4a5ff">"stack"</tspan><tspan fill="rgba(230,225,211,0.55)">: </tspan><tspan fill="#c4e890">"BM25 + Vector"</tspan><tspan fill="rgba(230,225,211,0.55)"> }</tspan></text>
+    <text font-size="13.5" y="158" fill="rgba(230,225,211,0.55)">}</text>
+    <text font-size="13" y="190" fill="rgba(230,225,211,0.45)">// 4 domains · 17 production projects · daily git activity</text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== TAB 04 — projects.gitlog ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.423;0.429;0.566;0.571;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">git log --featured --oneline -n 6</tspan>
+    </text>
+    <text font-size="13" y="34" fill="#e6e1d3"><tspan fill="#d9b86b">c0ffee1</tspan><tspan dx="14" fill="#e6e1d3">call-center-platform</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">Multi-tenant WebRTC SaaS</tspan><tspan dx="22" fill="#7ed99a">● live</tspan></text>
+    <text font-size="13" y="58" fill="#e6e1d3"><tspan fill="#d9b86b">a11ce42</tspan><tspan dx="14" fill="#e6e1d3">stroke</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">Event-sourced social art network</tspan><tspan dx="22" fill="#7ed99a">● live</tspan></text>
+    <text font-size="13" y="82" fill="#e6e1d3"><tspan fill="#d9b86b">deadbef</tspan><tspan dx="14" fill="#e6e1d3">icra-ceza-otomasyon</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">14-endpoint UYAP automation</tspan><tspan dx="22" fill="#7ed99a">● prod</tspan></text>
+    <text font-size="13" y="106" fill="#e6e1d3"><tspan fill="#d9b86b">1234567</tspan><tspan dx="14" fill="#e6e1d3">ictihat-motoru</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">BM25 + vector RAG search</tspan><tspan dx="22" fill="#7ed99a">● prod</tspan></text>
+    <text font-size="13" y="130" fill="#e6e1d3"><tspan fill="#d9b86b">abc4567</tspan><tspan dx="14" fill="#e6e1d3">culture-line</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">Realtime multiplayer trivia</tspan><tspan dx="22" fill="#ffbd2e">● staging</tspan></text>
+    <text font-size="13" y="154" fill="#e6e1d3"><tspan fill="#d9b86b">fedcba9</tspan><tspan dx="14" fill="#e6e1d3">pusula-dava</tspan><tspan dx="14" fill="rgba(230,225,211,0.55)">XHR case robot + Laravel panel</tspan><tspan dx="22" fill="#7ed99a">● prod</tspan></text>
+    <text font-size="13" y="190" fill="rgba(230,225,211,0.45)">// 6 featured · 11 internal · all green on prod observability</text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== TAB 05 — stack.json ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.566;0.571;0.709;0.714;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">cat package.json | jq .dependencies</tspan>
+    </text>
+    <text font-size="13.5" y="32" fill="rgba(230,225,211,0.55)">{</text>
+    <text font-size="13.5" y="54" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"lang"</tspan><tspan fill="rgba(230,225,211,0.55)">:      [</tspan><tspan fill="#c4e890">"TypeScript strict"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Node 20 ESM"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Python"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"PHP 8"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="76" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"api"</tspan><tspan fill="rgba(230,225,211,0.55)">:       [</tspan><tspan fill="#c4e890">"NestJS 11"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Prisma 5"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Postgres 15"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Redis 7"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"BullMQ"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="98" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"web"</tspan><tspan fill="rgba(230,225,211,0.55)">:       [</tspan><tspan fill="#c4e890">"React 18 + Vite"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Next.js 16"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Mantine 7"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Tailwind 4"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="120" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"mobile"</tspan><tspan fill="rgba(230,225,211,0.55)">:    [</tspan><tspan fill="#c4e890">"RN 0.76"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Expo SDK 54"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Skia 2.2"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Reanimated 3"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="142" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"telephony"</tspan><tspan fill="rgba(230,225,211,0.55)"> [</tspan><tspan fill="#c4e890">"Asterisk 20 LTS"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"sip.js 0.21"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Socket.IO"</tspan><tspan fill="rgba(230,225,211,0.55)">],</tspan></text>
+    <text font-size="13.5" y="164" fill="#e6e1d3"><tspan dx="14" fill="#c4a5ff">"infra"</tspan><tspan fill="rgba(230,225,211,0.55)">:     [</tspan><tspan fill="#c4e890">"Docker"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Caddy 2"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"PM2"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Supabase"</tspan><tspan fill="rgba(230,225,211,0.55)">, </tspan><tspan fill="#c4e890">"Sentry"</tspan><tspan fill="rgba(230,225,211,0.55)">]</tspan></text>
+    <text font-size="13.5" y="186" fill="rgba(230,225,211,0.55)">}</text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== TAB 06 — arch.tree ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0;0"
+             keyTimes="0;0.709;0.714;0.851;0.857;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">tree architecture/ -L 2</tspan>
+    </text>
+    <text font-size="13.5" y="32" fill="#d9b86b">architecture/</text>
+    <text font-size="13.5" y="54" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">EDGE/</tspan><tspan dx="40" fill="rgba(230,225,211,0.78)">Caddy 2 · Let's Encrypt · Cloudflare · Vercel</tspan></text>
+    <text font-size="13.5" y="76" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">FRONTEND/</tspan><tspan dx="20" fill="rgba(230,225,211,0.78)">React 18 + Vite · Mantine 7 · TanStack · Zustand</tspan></text>
+    <text font-size="13.5" y="98" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">API/</tspan><tspan dx="55" fill="rgba(230,225,211,0.78)">NestJS 11 · JWT+MFA TOTP · RBAC · Audit interceptor</tspan></text>
+    <text font-size="13.5" y="120" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">WORKERS/</tspan><tspan dx="28" fill="rgba(230,225,211,0.78)">BullMQ · Predictive dialer · Excel · Post-call</tspan></text>
+    <text font-size="13.5" y="142" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">REALTIME/</tspan><tspan dx="20" fill="rgba(230,225,211,0.78)">Socket.IO · Asterisk ARI / Stasis · Wallboard</tspan></text>
+    <text font-size="13.5" y="164" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">├── </tspan><tspan fill="#62c4ff">DATA/</tspan><tspan dx="44" fill="rgba(230,225,211,0.78)">Postgres 15 · Prisma 5 · Redis 7 · MinIO recording</tspan></text>
+    <text font-size="13.5" y="186" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">└── </tspan><tspan fill="#62c4ff">OBSERVABILITY/</tspan><tspan dx="-2" fill="rgba(230,225,211,0.78)">Sentry · JSONL log · Health dashboard · Backup cron</tspan></text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== TAB 07 — security.yaml ============== -->
+  <g transform="translate(28, 120)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;1;1;0"
+             keyTimes="0;0.851;0.857;0.995;1"
+             dur="28s" repeatCount="indefinite"/>
+
+    <text font-size="14" y="0" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+      <tspan dx="6">cat security.config.yaml</tspan>
+    </text>
+    <text font-size="13.5" y="32" fill="#c4a5ff">security:</text>
+    <text font-size="13" y="54" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">argon2id_password_hash</tspan><tspan fill="rgba(230,225,211,0.55)">:    </tspan><tspan fill="#c4e890">"GPU/ASIC-resistant; preferred over bcrypt"</tspan></text>
+    <text font-size="13" y="76" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">jwt_15m_7d_refresh</tspan><tspan fill="rgba(230,225,211,0.55)">:        </tspan><tspan fill="#c4e890">"Short-lived access + rotational refresh"</tspan></text>
+    <text font-size="13" y="98" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">mfa_totp_aes_gcm</tspan><tspan fill="rgba(230,225,211,0.55)">:          </tspan><tspan fill="#c4e890">"otplib + qrcode + encrypted-at-rest"</tspan></text>
+    <text font-size="13" y="120" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">brute_force_lock</tspan><tspan fill="rgba(230,225,211,0.55)">:          </tspan><tspan fill="#c4e890">"Redis counter; lock after 6 attempts"</tspan></text>
+    <text font-size="13" y="142" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">audit_log_interceptor</tspan><tspan fill="rgba(230,225,211,0.55)">:     </tspan><tspan fill="#c4e890">"All POST/PATCH/DELETE auto-logged"</tspan></text>
+    <text font-size="13" y="164" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">rls_double_layer</tspan><tspan fill="rgba(230,225,211,0.55)">:          </tspan><tspan fill="#c4e890">"Supabase RLS + DB trigger blocking"</tspan></text>
+    <text font-size="13" y="186" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">backup_cron_runbook</tspan><tspan fill="rgba(230,225,211,0.55)">:       </tspan><tspan fill="#c4e890">"Daily PG + MinIO; ops/RUNBOOK.md"</tspan></text>
+    <text font-size="13" y="208" fill="#e6e1d3"><tspan fill="rgba(230,225,211,0.55)">  - </tspan><tspan fill="#62c4ff">healthcheck_wallboard</tspan><tspan fill="rgba(230,225,211,0.55)">:     </tspan><tspan fill="#c4e890">"/health/live + System Health dashboard"</tspan></text>
+    <text font-size="14" y="252" fill="#e6e1d3">
+      <tspan fill="#d9b86b">ulaskara</tspan><tspan fill="rgba(230,225,211,0.45)">@</tspan><tspan fill="#d9b86b">studio</tspan>
+      <tspan dx="8" fill="#62c4ff" font-weight="700">❯</tspan>
+    </text>
+    <rect x="138" y="240" width="8" height="15" fill="#d9b86b">
+      <animate attributeName="opacity" values="1;0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============== STATUS BAR ============== -->
   <line x1="0" y1="490" x2="820" y2="490" stroke="rgba(255,255,255,0.08)"/>
   <path d="M0,490 L820,490 L820,510 Q820,520 810,520 L10,520 Q0,520 0,510 Z" fill="#07070b"/>
   <text x="22" y="508" font-size="11" fill="rgba(230,225,211,0.55)">

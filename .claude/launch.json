@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "whoami-svg",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "7821", "--directory", "github-readme"],
+      "port": 7821
+    }
+  ]
+}
